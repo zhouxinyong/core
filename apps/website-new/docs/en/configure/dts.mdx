@@ -31,6 +31,7 @@ The `DtsRemoteOptions` types are as follows:
 interface DtsRemoteOptions {
   tsConfigPath?: string;
   typesFolder?: string;
+  outputDir?: string;
   deleteTypesFolder?: boolean;
   additionalFilesToCompile?: string[];
   compilerInstance?: 'tsc' | 'vue-tsc';
@@ -116,6 +117,14 @@ tsconfig configuration file path
 - Default value: `'@mf-types'`
 
 The name of the generated compression type file. For example, if typesFolder is set to `custom`, then the name of the generated compression type file is: `custom.zip`
+
+#### outputDir
+
+- Type: `string`
+- Required: No
+- Default value: `undefined`
+
+Custom output directory for generated type assets. When configured, `@mf-types.zip` and `@mf-types.d.ts` are emitted relative to this directory.
 
 #### deleteTypesFolder
 
