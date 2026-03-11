@@ -30,6 +30,7 @@ interface PluginDtsOptions {
 interface DtsRemoteOptions {
   tsConfigPath?: string;
   typesFolder?: string;
+  outputDir?: string;
   deleteTypesFolder?: boolean;
   additionalFilesToCompile?: string[];
   compilerInstance?: 'tsc' | 'vue-tsc';
@@ -116,6 +117,14 @@ tsconfig 配置文件路径
 - 默认值：`'@mf-types'`
 
 生成的压缩类型文件名称，例如设置了typesFolder为 `custom`，那么生成的压缩类型文件名称为： `custom.zip`
+
+#### outputDir
+
+- 类型：`string`
+- 是否必填：否
+- 默认值：`undefined`
+
+用于配置生成类型产物的输出目录。配置后，`@mf-types.zip` 和 `@mf-types.d.ts` 会相对于该目录进行输出。
 
 #### deleteTypesFolder
 
